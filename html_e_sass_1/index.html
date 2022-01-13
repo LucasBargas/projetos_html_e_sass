@@ -12,17 +12,48 @@
   <!--google-fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
-</head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 <body>
   <header class="header">
-    <div class="header-brand">
-      <p>Brand</p>
-    </div>
+    <div class="header-area">
+      <a class="header-brand" href="index.html">
+        <span class="brand"></span>
 
-    <nav class="header-nav">
-      <p>Nav</p>
-    </nav>
+        <div>
+          <h2>Citadela</h2>
+          <span>Photographer Layout Pack</span>
+        </div>
+      </a>
+  
+      <nav class="header-nav">
+        <ul>
+          <li><a href="#homepage">Homepage</a></li>
+
+          <li><a href="#about-me">About Me</a></li>
+
+          <li class="main-menu">
+            <a id="portfolio" href="#portfolio">Portfolio</a>
+
+            <ul class="sub-menu">
+              <li><a href="#nature">Nature</a></li>
+              <li><a href="#portraits">Portraits</a></li>
+              <li><a href="#family">Family</a></li>
+              <li><a href="#events">Events</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#blog">Blog</a></li>
+
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-nav-mobile">
+        <button>
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div><!--header-area-->
   </header><!--header-->
 
   <script src="assets/js/app.js"></script>
