@@ -40,10 +40,19 @@
             flex-direction: column
             gap: 10px
 
+            @include base_mixins.mobile-380
+              gap: 5px
+
             a
               font-size: 3.125rem
               font-weight: 700
               color: variables.$light-color
+
+              @include base_mixins.mobile-380
+                font-size: 2.5rem
+
+              @include base_mixins.mobile-300
+                font-size: 2rem
 
               &:hover
                 text-decoration: underline
@@ -56,14 +65,24 @@
 
             @include base_mixins.mobile-800
               padding-top: 50px
+
+            @include base_mixins.mobile-350
+              padding-top: 30px
             
             div
               border-left: 3px solid variables.$link-color
               padding: 0 30px 0 30px
 
+              @include base_mixins.mobile-380
+                padding: 0 15px 0 15px
+
               p
                 font-size: 1.1875rem
                 line-height: 1.75rem
+
+                @include base_mixins.mobile-350
+                  font-size: 1rem
+                  line-height: 1.25rem
               
               p:last-of-type
                 margin: 24px 0
