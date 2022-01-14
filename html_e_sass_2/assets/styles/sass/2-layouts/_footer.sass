@@ -10,7 +10,7 @@
   &-area
     color: variables.$light-color
     @include base_mixins.container
-    padding: 60px 0
+    padding: 60px 0 35px 0
     display: grid
     grid-template-columns: repeat(4, 1fr)
     gap: 45px
@@ -133,4 +133,17 @@
 
           &:hover
             background: variables.$golden-hover
-      
+
+  .footer-info-creation
+    @include base_mixins.container
+    max-width: 800px !important
+    padding-bottom: 40px
+
+    .footer-info-content
+      text-align: center
+      font-size: .875rem
+      color: variables.$light-color
+
+      a
+        color: variables.$golden-color
+        font-weight: 700
