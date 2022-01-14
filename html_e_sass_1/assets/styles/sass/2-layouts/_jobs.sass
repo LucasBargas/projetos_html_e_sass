@@ -109,3 +109,63 @@
           figure
             img
               width: 100%
+
+  .jobs-bottom
+    background: variables.$secondary-section-color
+    @extend %space
+
+    .jobs-bottom-area
+      @include base_mixins.container(1160px)
+      color: variables.$light-color
+      padding: 4rem 0
+
+      @include base_mixins.mobile-500
+        padding: 3rem 0
+
+      .jobs-bottom-content
+        display: flex
+        gap: 30px
+
+        @include base_mixins.mobile-350
+          gap: 20px
+
+        @include base_mixins.mobile-500
+          flex-direction: column
+
+        img
+          width: 100%
+
+        &-left, &-right
+          width: 50%
+
+          @include base_mixins.mobile-500
+            width: 100%
+
+        &-left
+          div
+            p, strong
+              color: #b8b8b8
+              line-height: 1.75rem
+
+            strong
+              display: block
+              margin-top: 25px
+          
+          .jobs-bottom-button
+            padding: 60px 0 100px 0
+
+            @include base_mixins.mobile-350
+              padding: 40px 0 70px 0
+
+            a
+              border: 2px solid variables.$light-color
+              color: variables.$light-color
+              font-size: 1.125rem
+              padding: 10px 25px
+              border-radius: 22px
+
+              @include base_mixins.mobile-350
+                font-size: 1rem 
+
+              &:hover
+                text-decoration: underline
