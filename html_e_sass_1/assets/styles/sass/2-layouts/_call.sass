@@ -1,0 +1,39 @@
+@use '../1-base/_base_mixins.sass'
+@use '../1-base/_variables.sass'
+@use '../1-base/_extends.sass'
+
+.call-to-action
+  background: variables.$secondary-section-color
+  @extend %space
+
+  &-content
+    padding: 92px 0
+    @include base_mixins.container(768px)
+    color: variables.$light-color
+
+    @include base_mixins.mobile-350
+      padding: 50px 0
+
+    h2
+      font-size: 1.57rem
+      font-weight: 400
+      text-align: center
+
+      @include base_mixins.mobile-500
+        font-size: 1.25rem
+    
+    p
+      text-align: center
+      margin-top: 18px
+      font-size: 1.25rem
+      color: #ffffffb3
+
+      @include base_mixins.mobile-500
+        font-size: 1rem
+
+      a
+        font-weight: 700
+        color: variables.$link-color
+
+        &:hover
+          text-decoration: underline
