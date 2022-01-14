@@ -1,0 +1,102 @@
+@use '../1-base/_base_mixins.sass'
+@use '../1-base/_extends.sass'
+@use '../1-base/_variables.sass'
+
+.main-content
+  background: variables.$light-color
+
+.home-area
+  @extend %space
+
+  .home-content
+    @include base_mixins.container
+    padding: 45px 0
+
+    &-title
+      text-transform: uppercase
+      color: variables.$font-color
+      font-size: 2.5rem
+      @extend %font-adobe
+      text-align: center
+
+      @include base_mixins.mobile-420
+        font-size: 1.75rem
+      
+    p  
+      margin-top: 25px
+      color: variables.$font-color
+      text-align: center
+
+    &-pics
+      padding-top: 40px
+      display: flex
+      flex-direction: column
+
+      figure
+        position: relative
+        z-index: 6
+
+        &:not(:first-of-type)
+          margin-top: 95px
+
+          @include base_mixins.mobile-800
+            margin-top: 75px
+
+          @include base_mixins.mobile-500
+            margin-top: 45px
+            
+          @include base_mixins.mobile-370
+            margin-top: 35px
+
+        &::after
+          @include base_mixins.overlay
+          z-index: 7
+
+        &::before
+          background: variables.$light-color
+          position: absolute
+          bottom: 0
+          left: 50%
+          transform: translateX(-50%)
+          z-index: 8
+          font-size: 2rem
+          text-transform: uppercase
+          font-weight: 700
+          color: variables.$font-color
+          padding: 10px 0
+          width: 40%
+          text-align: center
+
+          @include base_mixins.mobile-800
+            width: 60%
+
+          @include base_mixins.mobile-500
+            width: 75%
+
+          @include base_mixins.mobile-420
+            font-size: 1.5rem
+
+          @include base_mixins.mobile-350
+            font-size: 1.25rem
+        
+        &:nth-of-type(1)::before
+          content: 'The Gym'
+
+        &:nth-of-type(2)::before
+          content: 'Poolside Bar'
+
+        &:nth-of-type(3)::before
+          content: 'The Spa'
+
+        &:nth-of-type(4)::before
+          content: 'Swmming Pool'
+
+        &:nth-of-type(5)::before
+          content: 'Restaurant'
+
+        &:nth-of-type(6)::before
+          content: 'Laundry'
+          
+        img
+          display: block
+          max-width: 100%
