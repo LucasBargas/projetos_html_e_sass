@@ -1,3 +1,267 @@
 @use '../1-base/_base_mixins.sass'
 @use '../1-base/_extends.sass'
 @use '../1-base/_variables.sass'
+
+.header
+  @extend %space
+  background-image: url('../../images/bg_main.png')
+  position: relative
+  z-index: 1
+
+  @include base_mixins.mobile-1536
+    @include base_mixins.image(840px, 100%)
+
+  @include base_mixins.mobile-1366
+    @include base_mixins.image(780px, 100%)
+
+  @include base_mixins.mobile-1100
+    @include base_mixins.image(75vh, 100%)
+
+  @include base_mixins.mobile-800
+    @include base_mixins.image(80vh, 100%)
+
+  @include base_mixins.mobile-500
+    @include base_mixins.image(100vh, 100%)
+
+  &::after
+    @include base_mixins.overlay(.5)
+    z-index: 2
+
+  &-area
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    color: variables.$light-color
+    position: relative
+    z-index: 3
+    @include base_mixins.container
+
+    &-brand
+     .brand-image
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        text-align: center
+        height: 100px
+        width: 190px
+        border-bottom-left-radius: 40px
+        border-bottom-right-radius: 40px
+        background: variables.$golden-color
+
+        @include base_mixins.mobile-420
+          width: 140px
+          height: 75px
+          border-bottom-left-radius: 30px
+          border-bottom-right-radius: 30px
+
+        @include base_mixins.mobile-350
+          width: 125px
+          height: 70px
+          border-bottom-left-radius: 25px
+          border-bottom-right-radius: 25px
+
+        h2, span
+          text-transform: uppercase
+          color: variables.$font-color
+          @extend %font-adobe
+          letter-spacing: 5px
+
+        h2
+          font-size: 1.75rem
+
+          @include base_mixins.mobile-420
+            font-size: 1.45rem
+
+          @include base_mixins.mobile-350
+            font-size: 1.25rem
+
+        span
+          display: block
+          font-size: .75rem
+
+          @include base_mixins.mobile-420
+            font-size: .625rem
+
+    &-nav
+      @include base_mixins.mobile-800
+        display: none
+
+      ul
+        display: flex
+        gap: 38px
+
+        li:first-of-type
+          border-bottom: 1px solid variables.$light-color
+
+        a
+          color: variables.$light-color
+          padding: 14.5px 0
+
+    &-mobile
+      display: none
+
+      @include base_mixins.mobile-800
+        display: block
+
+      button
+        border: 0
+        height: 30px
+        width: 30px
+        cursor: pointer
+        background: transparent
+
+        i
+          font-size: 1.25rem
+          color: variables.$light-color
+
+  .header-content
+    @include base_mixins.container
+    position: relative
+    z-index: 4
+    padding-top: 90px
+    color: variables.$light-color
+
+    @include base_mixins.mobile-390
+      padding-top: 60px
+
+    &-greetings
+      max-width: 530px
+
+      @include base_mixins.mobile-500
+        max-width: 100%
+
+      h1, h2
+        text-transform: uppercase
+
+      h2:first-of-type
+        font-size: 3.125rem
+        font-weight: 400
+
+        @include base_mixins.mobile-1280
+          font-size: 3rem
+
+        @include base_mixins.mobile-800
+          font-size: 2.5rem
+        
+        @include base_mixins.mobile-390
+          font-size: 2rem
+
+        @include base_mixins.mobile-300
+          font-size: 1.5rem
+
+      h1
+        font-size: 9.625rem
+        @extend %font-adobe
+        line-height: 8.5rem
+        letter-spacing: 1rem
+
+        @include base_mixins.mobile-1280
+          font-size: 8.5rem
+
+        @include base_mixins.mobile-800
+          line-height: 7rem
+          font-size: 6rem
+
+        @include base_mixins.mobile-500
+          font-size: 4.5rem
+          line-height: 6.5rem
+
+        @include base_mixins.mobile-390
+          font-size: 3.75rem
+          line-height: 5rem
+
+        @include base_mixins.mobile-300
+          font-size: 2.5rem
+          line-height: 3.25rem 
+
+      h2:last-of-type
+        @extend %font-adobe
+        font-size: 3.75rem
+        letter-spacing: 1rem
+
+        @include base_mixins.mobile-1280
+          font-size: 3.25rem
+
+        @include base_mixins.mobile-800
+          font-size: 3rem
+
+        @include base_mixins.mobile-500
+          font-size: 2.5rem
+        
+        @include base_mixins.mobile-390
+          font-size: 2rem
+
+        @include base_mixins.mobile-300
+          font-size: 1.5rem
+      
+      p
+        margin-top: 5px
+        font-size: 1.5625rem
+
+        @include base_mixins.mobile-500
+          margin-top: 10px
+          font-size: 1.5rem
+
+        @include base_mixins.mobile-370
+          font-size: 1rem
+
+    &-button
+      text-align: center
+      padding-top: 40px
+
+      a
+        display: inline-block
+        background: variables.$golden-color
+        color: variables.$light-color
+        text-transform: uppercase
+        font-weight: 700
+        font-size: 1.25rem
+        padding: 1rem
+        border-radius: 7px
+        transition: .4s
+
+        @include base_mixins.mobile-350
+          font-size: 1rem
+          padding: 12px
+
+        &:hover
+          background: variables.$golden-hover
+
+        .house-icon
+          display: inline-block
+          @include base_mixins.icons(20px, 20px)
+          background-image: url('../../images/home.png')
+          position: relative
+          top: 2px
+
+          @include base_mixins.mobile-350
+            @include base_mixins.icons(17px, 17px)
+
+  .scroll-button
+    display: flex
+    align-items: center
+    justify-content: center
+    background: white
+    height: 50px
+    width: 50px
+    position: absolute
+    bottom: 35px
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 5
+    border-radius: 50%
+    cursor: pointer
+
+    @include base_mixins.mobile-350
+      width: 40px
+      height: 40px
+
+    i
+      font-size: 1.75rem
+      font-weight: 700
+      color: variables.$font-color
+
+      @include base_mixins.mobile-350
+        font-size: 1.25rem

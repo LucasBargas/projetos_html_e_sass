@@ -10,15 +10,39 @@
   width: $width
   height: $height
 
-@mixin overflow($value: .3)
+@mixin overlay($value: .3)
+  content: ''
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
   background: rgba(20, 39, 74, $value)
 
-@mixin container($width: 1200px)
-  max-width: $width
+@mixin container
+  max-width: 1300px
   width: 100%
   margin: 0 auto
 
+  @include mobile-1366
+    max-width: 1200px
+
+  @include mobile-1280
+    max-width: 1100px
+
 // mixin-medias
+@mixin mobile-1536
+  @media(max-width: 1536px)
+    @content
+
+@mixin mobile-1366
+  @media(max-width: 1366px)
+    @content
+
+@mixin mobile-1280
+  @media(max-width: 1280px)
+    @content
+
 @mixin mobile-1100
   @media(max-width: 1100px)
     @content
@@ -35,8 +59,12 @@
   @media(max-width: 420px)
     @content
 
-@mixin mobile-380
-  @media(max-width: 380px)
+@mixin mobile-390
+  @media(max-width: 390px)
+    @content
+
+@mixin mobile-370
+  @media(max-width: 370px)
     @content
 
 @mixin mobile-350
