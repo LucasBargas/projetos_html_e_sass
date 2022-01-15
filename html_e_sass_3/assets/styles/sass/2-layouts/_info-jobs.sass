@@ -6,13 +6,34 @@
   display: grid
   grid-template-columns: repeat(2, 1fr)
 
+  @include base_mixins.mobile-800
+    grid-template-columns: 1fr
+
   #bg-one
     @include base_mixins.image(600px, 100%)
     background-image: url(../../images/bg_one.png)
 
+    @include base_mixins.mobile-800
+      grid-row: 1 / 2
+    
+    @include base_mixins.mobile-500
+      @include base_mixins.image(500px, 100%)
+
+    @include base_mixins.mobile-370
+      @include base_mixins.image(300px, 100%)
+
   #bg-two
     @include base_mixins.image(618px, 100%)
     background-image: url(../../images/bg_two.png)
+
+    @include base_mixins.mobile-800
+      grid-row: 3 / 4
+    
+    @include base_mixins.mobile-500
+      @include base_mixins.image(500px, 100%)
+    
+    @include base_mixins.mobile-370
+      @include base_mixins.image(300px, 100%)
 
   &-text
     background: variables.$section-color
@@ -24,16 +45,48 @@
       max-width: 65%
       color: variables.$primary-color
 
+      @include base_mixins.mobile-800
+        max-width: 100%
+
       h1
         font-size: 3.5rem
         max-width: 90%
         line-height: 4.5rem
+
+        @include base_mixins.mobile-1100
+          font-size: 3rem
+          line-height: 4rem
+
+        @include base_mixins.mobile-800
+          max-width: 100%
+        
+        @include base_mixins.mobile-420
+          font-size: 2.5rem
+          line-height: 3rem
+        
+        @include base_mixins.mobile-370
+          font-size: 2rem
+          line-height: 2.5rem
+        
+        @include base_mixins.mobile-350
+          font-size: 1.5rem
+          line-height: 1.75rem
 
       p
         margin: 35px 0
         font-size: 1.25rem
         line-height: 1.75rem
         max-width: 90%
+
+        @include base_mixins.mobile-1100
+          margin: 15px 0 35px 0
+        
+        @include base_mixins.mobile-800
+          max-width: 100%
+
+        @include base_mixins.mobile-420
+          font-size: 1rem
+          margin: 10px 0 20px 0
       
       a
         @include base_mixins.button(variables.$orange-color, variables.$orange-color, variables.$light-color)
@@ -43,9 +96,15 @@
       max-width: 65%
       color: variables.$primary-color
 
+      @include base_mixins.mobile-800
+        max-width: 100%
+
       h2
         font-weight: 400
         font-size: 2rem
+
+        @include base_mixins.mobile-350
+          font-size: 1.5rem
       
       p
         margin: 10px 0 20px 0
@@ -53,3 +112,19 @@
       a
         @include base_mixins.button(variables.$section-color, variables.$orange-color, variables.$orange-color)
         font-weight: 400
+
+  #text-one
+    @include base_mixins.mobile-800
+      grid-row: 2 / 3
+      padding: 50px 40px
+    
+    @include base_mixins.mobile-350
+      padding: 40px 20px
+
+  #text-two
+    @include base_mixins.mobile-800
+      grid-row: 4 / 5
+      padding: 50px 40px
+    
+    @include base_mixins.mobile-350
+      padding: 40px 20px
