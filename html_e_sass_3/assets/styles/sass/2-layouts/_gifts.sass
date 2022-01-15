@@ -1,0 +1,68 @@
+@use '../1-base/_base_mixins.sass'
+@use '../1-base/_extends.sass'
+@use '../1-base/_variables.sass'
+
+.gifts
+  @extend %space
+
+  &-area
+    @include base_mixins.container
+    padding: 90px 0
+
+    @include base_mixins.mobile-800
+      padding: 70px 0
+
+    @include base_mixins.mobile-500
+      padding: 60px 0
+
+    &-title
+      padding-bottom: 45px
+    
+    &-content
+      display: grid
+      grid-template-columns: repeat(4, 1fr)
+      gap: 25px
+
+      @include base_mixins.mobile-800
+        grid-template-columns: repeat(2, 1fr)
+        gap: 35px
+
+      @include base_mixins.mobile-500
+        grid-template-columns: 1fr
+      
+      @include base_mixins.mobile-350
+        gap: 25px
+      
+      &-single:first-of-type
+        background: variables.$light-color
+        box-shadow: 10px 10px 15px rgba(0, 0, 0, .05)
+
+      &-single:not(:first-of-type)
+        background: #FAFAFA
+
+      &-single
+        img
+          display: block
+          width: 100%
+        
+        div
+          color: variables.$primary-color
+          padding: 20px
+
+          h3
+            font-weight: 500
+            font-size: 1.25rem
+          
+          a
+            display: inline-block
+            font-size: .875rem
+            color: variables.$primary-color
+            margin-top: 50px
+
+            &::after
+              content: '>'
+              font-size: .75rem
+              font-weight: 700
+              position: relative
+              top: 1px
+              margin-left: 5px
