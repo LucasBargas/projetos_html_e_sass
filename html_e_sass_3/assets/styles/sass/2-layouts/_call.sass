@@ -1,0 +1,55 @@
+@use '../1-base/_base_mixins.sass'
+@use '../1-base/_extends.sass'
+@use '../1-base/_variables.sass'
+
+.call
+  @extend %space
+  background: variables.$orange-color
+
+  &-area
+    @include base_mixins.container
+    max-width: 850px
+    padding: 60px 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    @include base_mixins.mobile-500
+      flex-direction: column
+    
+    .call-area-left
+      @include base_mixins.mobile-350
+        text-align: center
+
+      h2
+        font-size: 2rem
+
+        @include base_mixins.mobile-350
+          font-size: 1.75rem
+      
+      p
+        font-size: 2rem
+
+        @include base_mixins.mobile-350
+          font-size: 1.25rem
+    
+    .call-area-right
+      display: flex
+      gap: 15px
+
+      @include base_mixins.mobile-500
+        padding-top: 35px
+      
+      @include base_mixins.mobile-350
+        padding-top: 25px 
+        flex-direction: column
+        gap: 10px
+
+      a
+        font-size: .875rem
+        
+        &:first-of-type
+          @include base_mixins.button(variables.$primary-color, variables.$primary-color, variables.$light-color)
+
+        &:last-of-type
+          @include base_mixins.button(variables.$orange-color, variables.$primary-color, variables.$primary-color)
