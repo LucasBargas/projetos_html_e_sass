@@ -87,8 +87,11 @@
             @include base_mixins.mobile-370
               font-size: 1rem
       
-      #second-article
-        box-shadow: 10px 10px 15px rgba(0, 0, 0, .05)
+      #second-article, #third-article
+        transition: .4s
+        
+        &:hover
+          box-shadow: 10px 10px 15px rgba(0, 0, 0, .05)
 
         h2
           width: 95%

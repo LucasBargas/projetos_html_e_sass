@@ -32,15 +32,15 @@
       
       @include base_mixins.mobile-350
         gap: 25px
-      
-      &-single:first-of-type
-        background: variables.$light-color
-        box-shadow: 10px 10px 15px rgba(0, 0, 0, .05)
-
-      &-single:not(:first-of-type)
-        background: #FAFAFA
 
       &-single
+        background: #FAFAFA
+        transition: .4s
+
+        &:hover
+          background: variables.$light-color
+          box-shadow: 10px 10px 15px rgba(0, 0, 0, .05)
+
         img
           display: block
           width: 100%
