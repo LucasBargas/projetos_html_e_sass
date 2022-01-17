@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Lucas Bargas - Projeto HTML e SASS #3</title>
+  <title>Lucas Bargas - Projeto HTML e SASS #4</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/styles/css/app.min.css">
 
@@ -19,9 +19,56 @@
   <!--google-fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 <body>
-  <h1>Quarto projeto em SASS - em construção</h1>
+  <header class="header">
+    <div class="header-area-top">
+      <div class="header-area-top-brand">
+        <a href="index.html">
+          <span></span>
+          <h2>citadela.</h2>
+        </a>
+      </div>
+
+      <nav class="header-area-top-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#travel">Travel</a></li>
+          <li><a href="#lifestyle">Lifestyle</a></li>
+          <li><a href="#flash-news">Flash News</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-area-top-mobile">
+        <button>
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div><!--header-area-top-->
+
+    <div class="header-area-bottom">
+      <div class="header-area-bottom-left">
+        <div>
+          <figure>
+            <img src="assets/images/icons/lightning.svg">
+          </figure>
+          <h2>Flash News</h2>
+        </div>
+
+        <a href="index.html">Food delivery on its peak since the early days</a>
+      </div>
+
+      <nav class="header-area-bottom-medias">
+        <ul>
+          <li><a href="index.html"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="index.html"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="index.html"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+      </nav>
+    </div><!--header-area-bottom-->
+  </header><!--header-->
   
   <script src="assets/js/app.js"></script>
 </body>
