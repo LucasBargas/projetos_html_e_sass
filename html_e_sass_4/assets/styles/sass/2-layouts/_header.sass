@@ -34,8 +34,11 @@
             @include base_mixins.image(25px, 40px)
         
         h2
-          font-size: 1.6rem
+          font-size: 2rem
           margin-left: 15px
+
+          @include base_mixins.mobile-420
+            font-size: 1.5rem
 
           @include base_mixins.mobile-300
             font-size: 1.25rem
