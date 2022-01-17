@@ -1,0 +1,19 @@
+@use '../1-base/_variables.sass'
+
+.article-tags
+  display: flex
+  flex-wrap: wrap
+
+  a
+    display: inline-block
+    font-weight: 700
+    color: variables.$primary-color
+    text-transform: uppercase
+    letter-spacing: 2px
+    border-left: 3px solid variables.$primary-color
+    padding: 3.5px 15px 3px 15px
+    transition: .3s
+    margin-right: 3px
+
+    &:hover
+      background: #e6e6e6

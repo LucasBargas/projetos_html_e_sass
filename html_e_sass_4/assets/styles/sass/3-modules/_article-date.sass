@@ -1,26 +1,43 @@
 @use '../1-base/_base_mixins.sass'
 @use '../1-base/_variables.sass'
 
-.article-date
-  position: absolute
-  top: 0
-  left: 0
-  background: variables.$primary-color
-  color: variables.$light-color
-  text-align: center
-  padding: 10px 17px
-  border-radius: 4px
-
-  h3
-    font-weight: 400
-    font-size: 1.6875rem
-
-  span
+article
+  a
     display: block
-    text-transform: uppercase
+    position: relative
 
-    &:first-of-type
-      font-size: .9rem
-    
-    &:last-of-type
-      font-size: .8rem
+    .article-date
+      position: absolute
+      top: 0
+      left: 0
+      background: variables.$primary-color
+      color: variables.$light-color
+      text-align: center
+      padding: 10px 17px
+      border-radius: 4px
+
+      @include base_mixins.mobile-300
+        padding: 10px 12px
+
+      h3
+        font-weight: 400
+        font-size: 1.6875rem
+
+        @include base_mixins.mobile-300
+          font-size: 1.25rem
+
+      span
+        display: block
+        text-transform: uppercase
+
+        &:first-of-type
+          font-size: .9rem
+
+          @include base_mixins.mobile-300
+            font-size: .875rem
+        
+        &:last-of-type
+          font-size: .8rem
+
+          @include base_mixins.mobile-300
+            font-size: .75rem
