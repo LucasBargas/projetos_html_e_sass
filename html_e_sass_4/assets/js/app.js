@@ -3,7 +3,7 @@ class Modal {
     this.modal = document.querySelector('.jsModal');
     this.classActive = 'active';
     this.event = ['touchstart', 'click']
-    document.body.style.overflow = 'hidden';
+    // document.body.style.overflow = 'hidden';
   }
 
   hiddenModal() {

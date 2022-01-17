@@ -1,0 +1,41 @@
+@use '../1-base/_base_mixins.sass'
+@use '../1-base/_extends.sass'
+@use '../1-base/_variables.sass'
+
+.articles-top
+  @extend %space
+
+  &-area
+    @include base_mixins.container
+    @extend %padding
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 50px
+
+    &-main
+      grid-column: 1 / 3
+
+      article
+        a
+          display: block
+          position: relative
+
+          img
+            display: block
+            width: 100%
+            height: 380px
+            object-fit: cover
+            display: block
+        
+        .article-title
+          padding: 20px 0 15px 0
+
+          a
+            @extend %size-one
+
+      
+    &-aside
+      grid-column: 3 / 4
+
+    &-bottom
+      grid-column: 1 / 4
