@@ -84,11 +84,17 @@
           z-index: 3
           padding: 0 45px
 
+          @include base_mixins.mobile-300
+            padding: 0 25px
+
           h2
             display: inline-block
             color: variables.$light-color
             font-size: 1.75rem
             position: relative
+
+            @include base_mixins.mobile-300
+              font-size: 1.35rem
 
             &::after
               content: ''
@@ -96,6 +102,9 @@
               @include base_mixins.icons(28px, 28px)
               background-image: url('../../images/icons/fire.svg')
               margin-left: 7px
+
+              @include base_mixins.mobile-300
+                @include base_mixins.icons(17px, 17px)
 
       .latest-articles
         h3
