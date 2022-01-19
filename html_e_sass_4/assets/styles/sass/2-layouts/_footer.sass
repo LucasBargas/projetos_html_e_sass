@@ -1,0 +1,49 @@
+@use '../1-base/_base_mixins.sass'
+@use '../1-base/_extends.sass'
+@use '../1-base/_variables.sass'
+
+.footer
+  background: variables.$primary-color
+  @extend %space
+
+  &-area
+    @include base_mixins.container
+    padding: 40px 0
+    color: variables.$light-color
+
+    nav
+      display: flex
+      justify-content: center
+      align-items: center
+
+      ul
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        
+        @include base_mixins.mobile-370
+          flex-direction: column
+          align-items: center
+
+        li
+          a
+            display: inline-block
+            padding: 10px 15px
+            color: variables.$light-color
+          
+            &:hover
+              text-decoration: underline
+    
+    &-creation
+      padding-top: 15px
+      margin: 0 auto
+      max-width: 85%
+      text-align: center
+      color: variables.$secondary-font-color
+
+      @include base_mixins.mobile-500
+        max-width: 100%
+
+      a
+        color: variables.$red-color
+        font-weight: 500
