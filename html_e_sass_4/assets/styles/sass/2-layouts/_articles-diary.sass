@@ -16,7 +16,7 @@
       flex-direction: column
 
     &-bg
-      width: 37%
+      width: 32%
       @include base_mixins.image(auto, 32%)
       background-image: url('https://html-e-sass4.projetoslucasbargas.com/assets/images/diary_bg.jpg')
       position: relative
@@ -26,6 +26,7 @@
 
       @include base_mixins.mobile-800
         width: 100%
+        @include base_mixins.image(auto, 100%)
 
       @include base_mixins.mobile-300
         padding: 30px
@@ -82,7 +83,7 @@
           font-weight: 800
     
     &-articles
-      width: 63%
+      width: 68%
       display: grid
       grid-template-columns: repeat(2, 1fr)
       gap: 30px
