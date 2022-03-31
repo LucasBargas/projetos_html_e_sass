@@ -1,0 +1,61 @@
+@use '../1-base/_base_mixins.sass'
+@use '../1-base/_extends.sass'
+@use '../1-base/_variables.sass'
+
+.header
+  background: #FAFAFA
+  @extend %space
+
+  &-area
+    @include base_mixins.container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    padding: 30px 0
+
+    @include base_mixins.mobile-370
+      padding: 20px 0
+    
+    @include base_mixins.mobile-350
+      padding: 15px 0
+
+    &-brand
+      a
+        display: block
+        @include base_mixins.icons(32px, 43px)
+        background-image: url('https://gifts.projetoslucasbargas.com/assets/images/logo_header.png')
+
+    &-nav
+      @include base_mixins.mobile-500
+        display: none
+
+      ul
+        display: flex
+
+        a
+          color: variables.$primary-color
+          padding: 11px 15px
+
+    &-button
+      @include base_mixins.mobile-500
+        display: none
+
+      a
+        @include base_mixins.button(#FAFAFA, variables.$orange-color, variables.$orange-color)
+    
+    &-button-mobile
+      display: none
+
+      @include base_mixins.mobile-500
+        display: block
+
+      button
+        height: 30px
+        width: 30px
+        background: transparent
+        cursor: pointer
+
+        i
+          color: variables.$primary-color
+          font-size: 1.25rem

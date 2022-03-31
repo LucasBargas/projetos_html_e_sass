@@ -1,0 +1,166 @@
+@use '../1-base/_base_mixins.sass'
+@use '../1-base/_extends.sass'
+@use '../1-base/_variables.sass'
+
+.header
+  @extend %space
+  background: variables.$primary-color
+
+  &-area-top
+    display: flex
+    align-items: center
+    justify-content: space-between
+    @include base_mixins.container
+    color: variables.$light-color
+    padding: 35px 0
+    border-bottom: 1px solid variables.$secondary-font-color
+
+    @include base_mixins.mobile-800
+      padding: 20px 0
+
+    &-brand
+      a
+        display: inline-flex
+        align-items: center
+        color: variables.$light-color
+        @extend %manrope
+      
+        span
+          display: block
+          @include base_mixins.image(33px, 52px)
+          background-image: url('https://citadela2.projetoslucasbargas.com/assets/images/logo_header.png')
+
+          @include base_mixins.mobile-300
+            @include base_mixins.image(25px, 40px)
+        
+        h2
+          font-size: 2rem
+          margin-left: 15px
+
+          @include base_mixins.mobile-420
+            font-size: 1.5rem
+
+          @include base_mixins.mobile-300
+            font-size: 1.25rem
+            margin-left: 10px
+
+    &-nav
+      @include base_mixins.mobile-800
+        display: none
+
+      ul
+        display: flex
+
+        li:first-of-type
+          a
+            color: variables.$light-color
+            font-weight: 600
+
+        a
+          display: block
+          color: variables.$secondary-font-color
+          padding: 15px 0 15px 35px
+          font-weight: 500
+          transition: .3s
+
+          &:hover
+            color: variables.$light-color
+
+    &-mobile
+      display: none
+
+      @include base_mixins.mobile-800
+        display: block
+
+      button
+        cursor: pointer
+        background: transparent
+        height: 30px
+        width: 30px
+
+        i
+          color: variables.$light-color
+          font-size: 1.15rem
+  
+  &-area-bottom
+    display: flex
+    align-items: center
+    justify-content: space-between
+    @include base_mixins.container
+    color: variables.$light-color
+    padding: 40px 0
+
+    @include base_mixins.mobile-800
+      flex-direction: column
+      justify-content: center
+    
+    @include base_mixins.mobile-800
+      padding: 25px 0
+
+    &-left
+      display: flex
+      align-items: center
+      
+      @include base_mixins.mobile-800
+        flex-direction: column
+      
+      div
+        display: flex
+        align-items: center
+
+        img
+          width: 15px
+          height: 15px
+          
+        h2
+          font-size: .9375rem
+          text-transform: uppercase
+          letter-spacing: 3px
+          margin-left: 10px
+
+      a
+        display: inline-block
+        font-size: 1.1875rem
+        font-weight: 700
+        color: #E6E6E6
+        margin-left: 60px
+
+        @include base_mixins.mobile-800
+          margin: 20px 0
+          text-align: center
+        
+        @include base_mixins.mobile-300
+          font-size: 1rem
+  
+
+    &-medias
+      ul
+        display: flex
+        align-items: center
+
+        li
+          margin-left: 28px
+
+          @include base_mixins.mobile-800
+            margin: 0 15px
+          
+          @include base_mixins.mobile-350
+            margin: 0 10px
+
+          i
+            font-size: 1.25rem
+
+            &:hover
+              transform: scale(1.1)
+          
+          .fab.fa-facebook
+            color: #1778f2
+
+          .fab.fa-twitter
+            color: #1da1f2
+
+          .fab.fa-instagram
+            color: #f00075
+
+          .fab.fa-youtube
+            color: #fe0000

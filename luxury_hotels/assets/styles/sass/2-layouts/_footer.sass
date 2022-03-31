@@ -1,0 +1,149 @@
+@use '../1-base/_base_mixins.sass'
+@use '../1-base/_extends.sass'
+@use '../1-base/_variables.sass'
+
+.footer
+  background: variables.$font-color
+  background-image: url('https://luxuryhotels.projetoslucasbargas.com/assets/images/footer.png')
+  @extend %space
+
+  &-area
+    color: variables.$light-color
+    @include base_mixins.container
+    padding: 60px 0 35px 0
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 45px
+
+    @include base_mixins.mobile-800
+      grid-template-columns: repeat(2, 1fr)
+
+    @include base_mixins.mobile-500
+      grid-template-columns: 1fr
+
+    @include base_mixins.mobile-390
+      padding: 40px 0
+      gap: 25px
+
+    &-single:nth-of-type(1)
+      a
+        display: inline-block
+        @extend %font-adobe
+        color: variables.$light-color
+        
+        h3, span
+          display: block
+          text-align: center
+          text-transform: uppercase
+          letter-spacing: 5px
+        
+        h3
+          font-size: 1rem
+        
+        span
+          font-size: .4rem
+          margin-top: 3px
+      
+      ul
+        padding-top: 20px
+        font-size: .75rem
+    
+    &-single:not(:first-of-type)
+      ul
+        display: flex
+        flex-direction: column
+        gap: 10px
+
+        a
+          color: variables.$light-color
+          font-size: .75rem
+          font-weight: 500
+    
+    &-single:nth-of-type(3)
+      li
+        a
+          position: relative
+          padding-left: 33px
+
+          &::after
+            content: ''
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            
+      li:nth-of-type(1)
+        a::after
+          @include base_mixins.icons(13px, 7px)
+          background-image: url('https://luxuryhotels.projetoslucasbargas.com/assets/images/icons/fb.png')
+
+      li:nth-of-type(2)
+        a::after
+          @include base_mixins.icons(13px, 16px)
+          background-image: url('https://luxuryhotels.projetoslucasbargas.com/assets/images/icons/tw.png')
+
+      li:nth-of-type(3)
+        a::after
+          @include base_mixins.icons(13px, 13px)
+          background-image: url('https://luxuryhotels.projetoslucasbargas.com/assets/images/icons/insta.png')
+
+    &-single:nth-of-type(4)
+      h4
+        font-weight: 500
+        font-size: .85rem
+
+      form
+        padding-top: 20px
+        position: relative
+        display: flex
+
+        input
+          width: 100%
+          height: 38px
+          background: variables.$font-color
+          border: 2px solid variables.$golden-color
+          font-size: .75rem
+          font-weight: 500
+          padding: 0 18px
+          border-radius: 3px
+          color: variables.$light-color
+          font-family: 'Montserrat', sans-serif
+
+          @include base_mixins.mobile-300
+            padding: 0 12px
+
+          &::placeholder
+            color: variables.$light-color
+            font-size: .75rem
+            font-weight: 500
+            letter-spacing: .5px
+        
+        button
+          display: block
+          height: 38px
+          background: variables.$golden-color
+          color: variables.$font-color
+          font-weight: 700
+          padding: 0 20px
+          border-radius: 3px
+          position: relative
+          right: 3px
+          cursor: pointer
+          transition: .4s
+
+          &:hover
+            background: variables.$golden-hover
+
+  .footer-info-creation
+    @include base_mixins.container
+    max-width: 800px !important
+    padding-bottom: 40px
+
+    .footer-info-content
+      text-align: center
+      font-size: .875rem
+      color: variables.$light-color
+
+      a
+        color: variables.$golden-color
+        font-weight: 700
