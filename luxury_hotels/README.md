@@ -1,5 +1,5 @@
 ## Link para visualizar a aplicação
-<https://luxuryhotels.projetoslucasbargas.com/>
+<https://luxury-hotels-projetoslucasbargas.netlify.app/>
 
 ### Informações sobre a aplicação
 * Layout encontrado na web; 

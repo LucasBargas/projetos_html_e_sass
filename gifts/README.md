@@ -1,5 +1,5 @@
 ## Link para visualizar a aplicação
-<https://gifts.projetoslucasbargas.com/>
+<https://gifts-projetoslucasbargas.netlify.app/>
 
 ### Informações sobre a aplicação
 * Layout encontrado na web; 

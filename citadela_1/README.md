@@ -1,5 +1,5 @@
 ## Link para visualizar a aplicação
-<https://citadela1.projetoslucasbargas.com/>
+<https://citadela1-projetoslucasbargas.netlify.app/>
 
 ### Informações sobre a aplicação
 * Layout encontrado na web; 
